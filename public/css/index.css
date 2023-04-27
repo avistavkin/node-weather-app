@@ -67,19 +67,22 @@ span {
 }
 
 .footer {
-    /* position: fixed;
+
+    position: fixed;
     bottom: 0;
+/*
     left: 0; */
-    margin-bottom: 0;
+    margin-bottom: 100;
 
     /* width: 100vw; */
     border-top: 1px solid rgb(210, 210, 210);
-    height: 20px;
+    height: 50px;
     font-size: 1rem;
-    padding-top: 6vh;
+    padding-top: 1vh;
     padding-left: calc(2vw + 10px);
     /* background-color: rgb(212, 65, 231); */
     color: #888888;
+ 
 }
 
 .bottom-strap {
@@ -116,6 +119,7 @@ span {
 }
 
 .searcharea .button {
+    background-color: rgb(220, 167, 228);
     padding: 10px;
     font-size: 1.5rem;
     cursor: pointer;

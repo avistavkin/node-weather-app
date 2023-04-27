@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode.js');
 
 // Set up express app
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // Static path setting
 const dirPath = path.join(__dirname, '../public');
@@ -23,35 +23,40 @@ app.set('view engine', 'hbs');
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
-        name: 'DM'
+        title: 'Weather222',
+        name: 'andvis',
+
+        message: 'Message for index page'
+        
     })
-})
+});
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help',
-        name: 'DM',
-        message: 'Hope this works at the time you\'re using it :P'
+        title: 'Help9999',
+        name: 'andvis',
+        message: 'Hope this works at the time you\'re using it :P 44'
     })
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About',
-        name: 'DM'
+        title: 'About1111',
+        name: 'andvis',
+
+        message: 'Hope this works'
     })
-})
+});
 
 app.get('/weather', (req, res) => {
     const location = req.query.address;
     const jsonData = {
-        title: 'Weather',
-        name: 'DM',
+        title: 'Weather333',
+        name: 'andvis',
         location
     };
 
-    // res.send(jsonData)
+    res.send(jsonData)
 
     if(!location) {
         jsonData.location = 'No address is entered.'
@@ -89,7 +94,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         message: 'Something went wrong with the page you are looking for',
         title: '404',
-        name: 'DM'
+        name: 'andvis'
     });
 })
 
