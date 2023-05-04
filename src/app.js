@@ -60,7 +60,7 @@ app.get('/weather', (req, res) => {
 
     if(!location) {
         jsonData.location = 'No address is entered.'
-        // res.render('weather', jsonData);
+        res.render('weather', jsonData);
         res.send(jsonData)
     }
     else {
@@ -69,7 +69,7 @@ app.get('/weather', (req, res) => {
             if (error) {
                 jsonData.forecast = error;
                 res.send(jsonData)
-                // res.render('weather', jsonData);
+                res.render('weather', jsonData);
             }
             else {
                 forecast({ latitude, longitude }, (error, { daily, currently }) => {
